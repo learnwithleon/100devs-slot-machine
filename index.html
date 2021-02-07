@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine - by lghiggino</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- CHANGE class visible to hidden, and hidden to visible after #start-game click -->
+    
+
+    <section id="player-controls" class="visible">
+        <h2>Lets play the slots!</h2>
+        <form>
+            <label for="player-name">What is your name?</label>
+            <input type="text" name="player-name" id="player-name" placeholder="Benedict">
+            <button id="start-game" class="visible">Start Playing</button>
+        </form>
+    </section>
+
+    <section id="slot-display" class="hidden">
+        <div class="panel" id="first-panel">5</div>
+        <div class="panel" id="second-panel">2</div>
+        <div class="panel" id="third-panel">1</div>
+    </section>
+
+    <section id="slot-controls" class="hidden">
+        <form>
+            <label for="ammount">Ammount to Bet</label>
+            <input type="number" name="ammount" id="bet-ammount" min="0">
+        </form>
+        <button id="slot-roll">Lets roll!</button>
+    </section>
+    
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
