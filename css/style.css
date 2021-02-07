@@ -1,0 +1,57 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #f12711, #f5af19);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+  text-align: center;
+  height: 100vh;
+}
+
+.clear {
+  clear: both;
+}
+
+.cards {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  float: left;
+  width: 20%;
+  height: 200px;
+  margin-bottom: 10px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img:nth-child(odd) {
+  background-image: url("/img/bluecards.jpg");
+}
+
+img:nth-child(even) {
+  background-image: url("/img/redcards.png");
+}
+
+.button {
+  clear: both;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
