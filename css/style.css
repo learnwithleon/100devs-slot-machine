@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  color: #333;
+  font-family: "Mulish", sans-serif;
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content:first baseline;
+}
+
+body section{
+    margin: 1rem 0 2rem;
+}
+
 #slot-display{
     display: flex;
     flex-flow: row wrap;
@@ -13,4 +37,12 @@
 
 #slot-controls{
 
+}
+
+.win{
+    color: green;
+}
+
+.lose{
+    color: red;
 }
