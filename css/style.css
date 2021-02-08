@@ -1,0 +1,88 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+html {
+     font-size: 62.5%;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+     background-color: #e9c46a;
+}
+
+button {
+     display: block;
+     margin: 1rem auto;
+     font-size: 5rem;
+     background-color: #2a9d8f;
+     border: none;
+}
+form {
+     text-align: center;
+}
+section {
+     display: flex;
+     justify-content: space-around;
+     margin: 5rem 0;
+}
+i {
+     font-size: 20rem;
+     padding: 2rem;
+     color: #e76f51;
+     border: none;
+}
+h4 > i {
+     font-size: 2rem;
+     padding: 0 0.5rem;
+}
+h3 {
+     display: inline-block;
+     margin: 0 10rem 0 0;
+     padding: 0;
+     font-size: 4rem;
+     font-weight: normal;
+}
+label {
+     font-size: 5rem;
+}
+input {
+     font-size: 3rem;
+     width: 20rem;
+     position: relative;
+     bottom: 0.5rem;
+     background-color: #2a9d8f;
+     border: none;
+}
+h4 {
+     font-size: 2rem;
+}
+h1 {
+     text-align: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
