@@ -20,8 +20,8 @@ const jackpot = document.getElementById("jackpot");
 const slotScreen = document.getElementById("slotScreen");
 const playaPlaya = document.getElementById("playaPlaya");
 
-
-
+const slotSong = document.getElementById('slotSong')
+slotSong.volume = 0.5;
 //array of three slot screen elements
 let slotIcons = Array.from(document.querySelectorAll(".slotIcon"));
 
@@ -46,6 +46,7 @@ spin.addEventListener("click", animateMate);
 
 function animateMate() {
   if (Number(currentCash.innerText) - Number(betAmount.innerText) >= 0) {
+      slotSong.play()
     winAmount.innerText = "0";
     spin.removeEventListener("click", animateMate);
     currentCash.innerText =
@@ -101,7 +102,9 @@ function animateMate() {
           Number(currentCash.innerText) + Number(winAmount.innerText);
       }
       spin.addEventListener("click", animateMate);
-    }, 5000);
+      slotSong.pause()
+      slotSong.currentTime = 0  
+    }, 5200);
   } else {
     alert("you are broke, loser!");
   }
