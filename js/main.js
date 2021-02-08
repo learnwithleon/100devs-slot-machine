@@ -21,7 +21,12 @@ const slotScreen = document.getElementById("slotScreen");
 const playaPlaya = document.getElementById("playaPlaya");
 
 const slotSong = document.getElementById('slotSong')
+const jorkportSong = document.getElementById('jorkport')
+const winSong = document.getElementById('winny')
 slotSong.volume = 0.5;
+jorkportSong.volume = 0.5;
+winSong.volume = 0.5;
+
 //array of three slot screen elements
 let slotIcons = Array.from(document.querySelectorAll(".slotIcon"));
 
@@ -46,7 +51,8 @@ spin.addEventListener("click", animateMate);
 
 function animateMate() {
   if (Number(currentCash.innerText) - Number(betAmount.innerText) >= 0) {
-      slotSong.play()
+    
+    slotSong.play()
     winAmount.innerText = "0";
     spin.removeEventListener("click", animateMate);
     currentCash.innerText =
@@ -72,6 +78,11 @@ function animateMate() {
         jackpot.animate(jackFrames, jackTime);
         slotScreen.animate(screenJackFrames, jackTime);
         playaPlaya.animate(screenJackFrames, jackTime);
+        jorkportSong.play()
+        setTimeout(() => {
+          jorkportSong.pause()
+          jorkportSong.currentTime = 0
+        }, 5250);
       } else if (
         slotIcons[0].innerText === slotIcons[1].innerText &&
         slotIcons[0].innerText === slotIcons[2].innerText
@@ -82,10 +93,20 @@ function animateMate() {
         jackpot.animate(jackFrames, jackTime);
         slotScreen.animate(screenJackFrames, jackTime);
         playaPlaya.animate(screenJackFrames, jackTime);
+        jorkportSong.play()
+        setTimeout(() => {
+          jorkportSong.pause()
+          jorkportSong.currentTime = 0
+        }, 5250);
       } else if (slotIcons[0].innerText === slotIcons[1].innerText) {
         winAmount.innerText = Number(betAmount.innerText) * 3;
         currentCash.innerText =
           Number(currentCash.innerText) + Number(winAmount.innerText);
+          winSong.play()
+        setTimeout(() => {
+          winSong.pause()
+          winSong.currentTime = 0
+        }, 5250);
       } else if (
         slotIcons[0].innerText === "💰" &&
         slotIcons[2].innerText === "💰"
@@ -93,6 +114,11 @@ function animateMate() {
         winAmount.innerText = Number(betAmount.innerText) * 100;
         currentCash.innerText =
           Number(currentCash.innerText) + Number(winAmount.innerText);
+          winSong.play()
+        setTimeout(() => {
+          winSong.pause()
+          winSong.currentTime = 0
+        }, 5250);
       } else if (
         slotIcons[0].innerText === slotIcons[2].innerText &&
         slotIcons[0].innerText !== slotIcons[1].innerText
@@ -100,6 +126,11 @@ function animateMate() {
         winAmount.innerText = Number(betAmount.innerText) * 3;
         currentCash.innerText =
           Number(currentCash.innerText) + Number(winAmount.innerText);
+          winSong.play()
+        setTimeout(() => {
+          winSong.pause()
+          winSong.currentTime = 0
+        }, 5250);
       }
       spin.addEventListener("click", animateMate);
       slotSong.pause()
@@ -115,20 +146,35 @@ function animateMate() {
 //change the bet amount
 function modifyBetAmount(e) {
   if (e.target === betAdd) {
+     if(Number(betAmount.innerText) + 1 <= Number(currentCash.innerText)){
     betAmount.innerText = Number(betAmount.innerText) + 1;
+    }else{
+        alert('you do not have enough monies')
+      }
   }else if (e.target === betSub) {
     if (Number(betAmount.innerText) > 0) {
       betAmount.innerText = Number(betAmount.innerText) - 1;
       }
     } else if (e.target === addFive) {
+      if(Number(betAmount.innerText) + 5 <= Number(currentCash.innerText)){
       betAmount.innerText = Number(betAmount.innerText) + 5;
+      }else{
+        alert('you do not have enough monies')
+      }
     } else if (e.target === addTen) {
+      if(Number(betAmount.innerText) + 10 <= Number(currentCash.innerText)){
       betAmount.innerText = Number(betAmount.innerText) + 10;
+      }else{
+        alert('you do not have enough monies')
+      }
     } else if (e.target === addHund) {
+      if(Number(betAmount.innerText) + 100 <= Number(currentCash.innerText)){
       betAmount.innerText = Number(betAmount.innerText) + 100;
-    } else if (e.target === addTen) {
-      betAmount.innerText =
-        Number(betAmount.innerText) + Number(currentCash.innerText);
+      }else{
+        alert('you do not have enough monies')
+      }
+    } else if (e.target === allIn) {
+      betAmount.innerText = Number(currentCash.innerText);
     }
 }
 
