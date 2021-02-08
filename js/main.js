@@ -10,21 +10,17 @@ const winAmount = document.getElementById("winAmount");
 //bet Mods
 const betAdd = document.getElementById("betAdd");
 const betSub = document.getElementById("betSub");
-const betMod = document.getElementById("betMod");
+const bet = document.getElementById("bet");
+const addFive = document.getElementById("addFive");
+const addTen = document.getElementById("addTen");
+const addHund = document.getElementById("addHund");
+const allIn = document.getElementById("allIn");
 //jackpot stuff
 const jackpot = document.getElementById("jackpot");
 const slotScreen = document.getElementById("slotScreen");
 const playaPlaya = document.getElementById("playaPlaya");
 
-function modifyBetAmount(e) {
-  if (e.target === betAdd) {
-    betAmount.innerText = Number(betAmount.innerText) + 1;
-  } else if (e.target === betSub) {
-    if (Number(betAmount.innerText) > 0) {
-      betAmount.innerText = Number(betAmount.innerText) - 1;
-    }
-  }
-}
+
 
 //array of three slot screen elements
 let slotIcons = Array.from(document.querySelectorAll(".slotIcon"));
@@ -37,7 +33,7 @@ console.log(randomIndeces);
 slotIcons.forEach((e, i) => (e.innerText = icons[randomIndeces[i]]));
 
 //event listeners
-betMod.addEventListener("click", modifyBetAmount);
+bet.addEventListener("click", modifyBetAmount);
 spin.addEventListener("click", animateMate);
 
 //three money bags === super jackpot
@@ -49,7 +45,7 @@ spin.addEventListener("click", animateMate);
 //two of a kind === 3*bet amount
 
 function animateMate() {
-  if (Number(currentCash.innerText) - Number(betAmount.innerText) > 0) {
+  if (Number(currentCash.innerText) - Number(betAmount.innerText) >= 0) {
     winAmount.innerText = "0";
     spin.removeEventListener("click", animateMate);
     currentCash.innerText =
@@ -109,6 +105,28 @@ function animateMate() {
   } else {
     alert("you are broke, loser!");
   }
+}
+
+
+
+//change the bet amount
+function modifyBetAmount(e) {
+  if (e.target === betAdd) {
+    betAmount.innerText = Number(betAmount.innerText) + 1;
+  }else if (e.target === betSub) {
+    if (Number(betAmount.innerText) > 0) {
+      betAmount.innerText = Number(betAmount.innerText) - 1;
+      }
+    } else if (e.target === addFive) {
+      betAmount.innerText = Number(betAmount.innerText) + 5;
+    } else if (e.target === addTen) {
+      betAmount.innerText = Number(betAmount.innerText) + 10;
+    } else if (e.target === addHund) {
+      betAmount.innerText = Number(betAmount.innerText) + 100;
+    } else if (e.target === addTen) {
+      betAmount.innerText =
+        Number(betAmount.innerText) + Number(currentCash.innerText);
+    }
 }
 
 //aniStuff
