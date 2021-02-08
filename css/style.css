@@ -1,0 +1,100 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+}
+
+#slotScreen {
+    border: 8px ridge gold;
+    height: 50%;
+    max-height: 400px;
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+    background-color: black;
+}
+
+.slot {
+    height: 70%;
+    background-color: rgba(35, 88, 83, 0.479);
+    width: 30%;
+    border: 5px inset rgb(104, 104, 104);
+    overflow: hidden;
+}
+
+.slotIcon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 10rem;
+}
+
+#playaPlaya {
+    height: 20%;
+    max-height: 150px;
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+}
+
+#playaPlaya>section {
+    width: 25%;
+    height: 100%;
+    border: 8px ridge gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: red;
+    font-size: 2rem;
+}
+
+#jackpot {
+    height: 20%;
+    max-height: 150px;
+    margin-top: 5%;
+    width: 85%;
+    border: 8px ridge rgb(128, 128, 50);
+    color: rgb(138, 138, 100);
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(104, 104, 104);
+}
+
+#jackpot p {
+    font-family: 'Bungee', cursive;
+    margin: 0;
+}
+
+#betMod {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
