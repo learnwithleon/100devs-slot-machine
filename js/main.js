@@ -45,18 +45,22 @@ const slotMachine = {
         }
     },
     game: function () {
-        if(total < 0){
+        if(total < 10){
             alert(`You're out of money!`)
             return
         }
-        if(userBet > 0 && total > 0){
+        if(userBet > total){
+            alert(`You don't have enough money to cover the bet`)
+            return
+        }
+        if(userBet > 0 && total >= 10){
             const reelOne = slotMachine.reel()
             const reelTwo = slotMachine.reel()
             const reelThree = slotMachine.reel()
             console.log(reelOne,reelTwo,reelThree)
             if(reelOne === reelTwo && reelOne === reelThree){
-                score += userBet*2
-                total += userBet*2
+                score += userBet*3
+                total += userBet*3
                 alert('JACKPOT!')
             } else if(reelOne === reelTwo || reelOne === reelThree || reelTwo === reelThree){
                 score += userBet
