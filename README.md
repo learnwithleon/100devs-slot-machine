@@ -1,3 +1,7 @@
+I completed the challenge: 2
+I feel good about my code: 2
+I was only able to get the initial set up but will work on JS over the next couple of days
+
 # 🎰 #100Devs Project: Slot Machine
 
 ### Goal: Build a Simple Slot Machine
