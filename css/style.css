@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: grey;
+    margin: 0;
+}
+
+#results{
+    position: relative;
+    display: inline-block;
+    font-size: 4rem;
+    width: 100%;
+}
+.result{
+    position: relative;
+    display: inline-block;
+    width: 33.3%;
+    text-align: center;
+}
+.controls > *{
+    display: inline-block;
+}
