@@ -32,10 +32,20 @@ body section{
     height: 5rem;
     border:1px solid red;
     text-align: center;
-    line-height: 5rem;
+    /* overflow: hidden; */
+    position: relative;
 }
 
-#slot-controls{
+.panel p{
+    transform: translateY(0.5rem)
+}
+
+.panel.spinning p{
+   transform: translateY(4rem)
+} 
+
+#slot-results{
+    text-align: center;
 
 }
 
@@ -45,4 +55,23 @@ body section{
 
 .lose{
     color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+#modal{
+    position: fixed;
+    top:4rem;
+    background-color: white;
+    padding:1rem;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius:5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }

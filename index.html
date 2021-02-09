@@ -4,42 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot Machine - by lghiggino</title>
+    <script src="https://kit.fontawesome.com/33c90e5f6c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
     <!-- CHANGE class visible to hidden, and hidden to visible after #start-game click -->
     
 
-    <section id="player-controls" class="visible">
+    <section id="player-controls">
         <h2>Lets play the slots!</h2>
-        <!-- <form>
+        <form>
             <label for="player-name">What is your name?</label>
             <input type="text" name="player-name" id="player-name" placeholder="Benedict">
-            <button id="start-game" class="visible">Start Playing</button>
-        </form> -->
-    </section>
-
-    <section id="slot-controls" class="hidden">
-        <form>
-            <label for="ammount">Ammount to Bet</label>
-            <input type="number" name="ammount" id="bet-ammount" min="0">
         </form>
     </section>
 
-    <section id="slot-display" class="hidden">
-        <div class="panel" id="first-panel">5</div>
-        <div class="panel" id="second-panel">2</div>
-        <div class="panel" id="third-panel">1</div>
-        <button id="slot-roll">Lets roll!</button>
+    <section id="slot-controls">
+        <form>
+            <label for="ammount">Ammount to Bet</label>
+            <input type="number" name="ammount" id="bet-ammount" min="0" max="100">
+        </form>
     </section>
 
-   
+    <section id="slot-display">
+        <div class="panel " id="first-panel"><p>5</p></div>
+        <div class="panel" id="second-panel"><p>2</p></div>
+        <div class="panel" id="third-panel"><p>1</p></div>
+        <button id="slot-roll">Pull lever!</button>
+    </section>
 
     <section id="slot-results">
         <p id="result"></p>
+        <p id="current-credit"></p>
     </section>
     
+    <section id="modal" class="hidden">
+        <p>Your credit is gone!</p>
+        <p>Would you like to purchase more?</p>
+        <form>
+            <label for="purchase-ammount" max="500"></label>
+            <input type="number" name="purchase-ammount" id="purchase-ammount">
+            <button id="purchase-ammount-btn">Buy more</button>
+        </form>
+    </section>
 
     <script src="./js/app.js"></script>
 </body>
