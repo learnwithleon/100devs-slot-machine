@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+#img1,
+#img2,
+#img3 {
+  height: 10vh;
+  width: 10vh;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  font-size: 2rem;
+}
+
+#jackpot {
+  margin-left: 32%;
+  width: 50vw;
+  height: 10vh;
+  margin-top: 2%;
+  font-size: 2rem;
+}
+
+.reelContainer,
+#bets {
+  display: flex;
+  justify-content: center;
+}
+.reelContainer img {
+  margin: 1%;
+  border: 2px solid black;
+  padding: 1%;
+}
+
+#bets button {
+  /* border: 2px solid greenyellow; */
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#spinBtn {
+  margin: 1%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15vw;
+  height: 10vh;
+  /* border: 2px solid greenyellow; */
+  font-size: 3.5rem;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  background-color: rgb(96, 96, 231);
+  color: yellow;
+}
+
+.betBorder {
+  border: 4px solid rgb(96, 96, 231);
+  border-radius: 10px;
+  background-color: yellow;
+}
