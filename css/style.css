@@ -12,9 +12,27 @@
 /*******************************************/
 img{
   display: block;
-  margin: 0 auto;
+  margin: 20px 20px;
 }
 
+h1{
+  text-align: center;
+}
+
+.slot-machine-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slot-reel{
+  display: flex; 
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.slot-space{
+  border: solid black 2px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
