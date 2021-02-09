@@ -35,13 +35,11 @@ let slotMachine = {
     // //make a purchase
         document.querySelector("#purchase-ammount-btn").addEventListener("click", (e) => {
             e.preventDefault()
-            player.credit += Number(document.querySelector("#purchase-ammount").value)
+            player.credit = Number(document.querySelector("#purchase-ammount").value)
             document.querySelector("#modal").classList.remove("visible");
             return
         })
     },
-    
-
 }
 
 slotMachine.roll.addEventListener("click", play)
@@ -119,9 +117,8 @@ function textClassToggler(condition){
 }
 
 function animateRoll(){
-    let time = Math.floor(Math.random()*2500)
+    let time = Math.floor(Math.random()*2000)
 
-    console.log(time)
     let interval = function (){}
     slotMachine.firstPanel.innerHTML = ""
     slotMachine.secondPanel.innerHTML = ""
