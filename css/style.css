@@ -1,0 +1,68 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+* {
+  font-family: monospace;
+}
+
+body {
+  margin: 10px;
+}
+
+.slot-number {
+  font-size: 100px;
+}
+
+.message {
+  text-align: center;
+  display: none;
+  font-size: xx-large;
+  color: red;
+}
+
+.center {
+  text-align: center;
+}
+
+.lever {
+  margin-top: 5px;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#jackpot-txt {
+  display: none;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
