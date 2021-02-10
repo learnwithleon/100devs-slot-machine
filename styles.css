@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  text-align: center;
+}
+
+.reel {
+  display: inline-block;
+}
+
+img {
+  width: 6rem;
+}
