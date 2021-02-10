@@ -1,0 +1,67 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.slotMachineContainer {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 5%;
+  border: 1px solid red;
+}
+.slotMachineContainer {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 5%;
+  border: 1px solid red;
+}
+
+.slotIconContainer {
+  border: 1px solid green;
+  display: flex;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slotIconContainer h6 {
+  text-align: center;
+  font-size: 2rem;
+}
+.slotIcons {
+  width: 33.3%;
+}
+.hidden {
+  display: none;
+}
+.lost {
+  background: rgb(255, 88, 88);
+  border: 2px solid red;
+  font-size: 20px;
+  font-weight: bold;
+}
+.won {
+  background: rgb(108, 255, 108);
+  border: 2px solid green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bottomContainer {
+  display: flex;
+}
+.bottomContainer div,.bottomContainer button {
+  width: 25%;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<section class="slotMachineContainer">
+			<h1>slot machine</h1>
+			<section class='slotIconContainer'>
+				<div class ='slotIcons'>
+					<img class='leftIcons'></img>
+				</div>
+				<div class ='slotIcons'>
+					<img class='midIcons'></img>
+				</div>
+				<div class ='slotIcons'>
+					<img class='rightIcons'></img>
+				</div>
+			</section>
+			<div class='bottomContainer'>
+				<div>
+					<h6>Your Money</h6>
+					<h6>$ <span id='myMoney'>100</span></h6>
+				</div>
+				<div>				
+					<input id ='numInput' type="number" min='0'>
+				</div>
+				<div id = spinResultsContainer>
+					<h6 id='spinResults'>You won</h6>
+					<h6 id='valueWon'>1111</h6>
+				</div>
+				<button id='spinBabySpin'>SPIN</button>
+			</div>
+
+		</section>
+		
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
