@@ -3,6 +3,7 @@ let reelArr = ['pikachu', 'charmander', 'bulbasaur', 'squirtle', 'mewtwo']
 let reelArr1 = []
 let reelArr2 = []
 let reelArr3 = []
+let consoleMessage = document.querySelector('.match-announcement>h3')
 const totalCoins = document.getElementById('coinAmount')
 const betAmount = document.getElementById('betAmount')
 const slotReel1 = document.querySelector('.slot-reel-1')
@@ -19,7 +20,7 @@ function playGame(){
         resolveBets(checkMatch())
     }
     else
-        alert('Not Enough Coins!')
+        consoleMessage.textContent = 'Not Enough Coins! Please insert more coins or reduce bet amount to play again!'
 }
 
 function randomizeReels(){
@@ -36,19 +37,20 @@ function renderReels(){
         //Remove the glow for matched pokemon
         slotReel1.children[i].classList.remove('match')
         slotReel2.children[i].classList.remove('match')
-        slotReel3.children[i].classList.remove('match')
-        
+        slotReel3.children[i].classList.remove('match')        
     }     
 }
 
 function checkMatch(){
     let totalMatches = 0
+    consoleMessage.textContent = ''
     for(let i = 0; i < reelWindow; i++){
         if(reelArr1[i] == reelArr2[i] && reelArr2[i] == reelArr3[i]){
             totalMatches++
             slotReel1.children[i].classList.add('match')
             slotReel2.children[i].classList.add('match')
             slotReel3.children[i].classList.add('match')
+            consoleMessage.textContent += `Wow!! You caught a ${capitalizeFirstLetter(reelArr1[i])}! You are a Pokemon Master!!\n`
         }
     }
     let i = reelWindow - 1
@@ -57,15 +59,27 @@ function checkMatch(){
         slotReel1.children[i].classList.add('match')
         slotReel2.children[i-1].classList.add('match')
         slotReel3.children[i-2].classList.add('match')
+        consoleMessage.textContent = `Wow!! You caught a ${capitalizeFirstLetter(reelArr1[i])}! You are a Pokemon Master!!`
     }
     else if(reelArr3[i] == reelArr2[i-1] && reelArr2[i-1] == reelArr1[i-2]) {
         totalMatches++
         slotReel1.children[i-2].classList.add('match')
         slotReel2.children[i-1].classList.add('match')
         slotReel3.children[i].classList.add('match')
+        consoleMessage.textContent = `Wow!! You caught a ${capitalizeFirstLetter(reelArr3[i])}! You are a Pokemon Master!!`
+    }
+    else if(totalMatches == 0){
+        consoleMessage.textContent  = 'Didn\'t catch anything... Better luck next time!' 
     }
     return totalMatches 
 }
+
+function resolveBets(matches){
+    if(matches)
+       totalCoins.innerText =  Number(totalCoins.innerText) + 2**matches*betAmount.value
+    else
+        totalCoins.innerText = Number(totalCoins.innerText) - betAmount.value
+  }
 
 //Must use Array.from or .slice() to return a copy of the array. Returning the original array will cause assignments to this return value to point to the reference for the original array.
 function shuffle(array) {
@@ -80,9 +94,6 @@ function shuffle(array) {
     return array.slice(0)
   }
 
-  function resolveBets(matches){
-    if(matches)
-       totalCoins.innerText =  Number(totalCoins.innerText) + 2**matches*betAmount.value
-    else
-        totalCoins.innerText = Number(totalCoins.innerText) - betAmount.value
-  }
+function capitalizeFirstLetter(word){
+    return word[0].toUpperCase() + word.slice(1)
+}

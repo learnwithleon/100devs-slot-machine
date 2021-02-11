@@ -10,7 +10,8 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 	</head>
 	<body>
@@ -51,17 +52,20 @@
 				</div>
 			</div>		
 		</div>
-		<div class = "menu-container">
-			<div class = "bet-menu">
-				<span>COINS: </span>
-				<br>
-				<span id = "coinAmount">100</span>
+		<div class = "menu-parent-container">
+			<div class = "menu-container">
+				<div class = "bet-menu">
+					<h2>COINS: </h2>
+					<span id = "coinAmount">100</span>
+				</div>
+				<img id = "playButton" src="https://fontmeme.com/permalink/210211/f6a50144c68e46c89f3708329a654b3e.png">
+				<div class = "bet-menu">	
+					<h2><label for="bet_amount">BET:</label></h2>
+					<input id = "betAmount" type= "text" name = "bet_amount" placeholder="1" value = 1> 
+				</div>
 			</div>
-			<img id = "playButton" src="https://fontmeme.com/permalink/210211/f6a50144c68e46c89f3708329a654b3e.png">
-			<div class = "bet-menu">	
-				<label for="bet_amount">BET:</label>
-				<br>
-				<input id = "betAmount" type= "text" name = "bet_amount" placeholder="1" value = 1> 
+			<div class = "match-announcement">
+				<h3>Click 'Play' to Begin!</h3>
 			</div>
 		</div>
 
