@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Slot machine game">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Slot Machine, Game">
+
+  <title>Slot Machine!</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main>
+    <section id="status">
+      <p>WELCOME!</p>
+      <p>LUCKY NUMBER SLOTS</p>
+      <p>JACKPOT VALUE IS 10000</p>
+    </section>
+    <section class="wrapper">
+      <section id="bets">
+        <div class="headers">
+
+          <div class="jackNum">
+            <span class="hd1">TOKENS LEFT</span>
+            <span id="tokNum"></span>
+          </div>
+          <div class="scores">
+            <span class="hd2">SCORES</span>
+            <span id="score"></span>
+          </div>
+          <div id="userInput">
+            <span class="hd3">YOUR BET</span>
+            <input type="number" id="betValue" value="" name="" placeholder="100">
+          </div>
+        </div>
+
+      </section>
+
+      <div class="playStatus"></div>
+    </section>
+    <section id="Slots">
+      <svg width="550" height="220" viewBox="0 0 1600 500">
+
+        <rect x="0" y="10" width="500" height="500" fill="black" stroke="white" stroke-width="10">
+        </rect>
+
+        <rect x="550" y="10" width="500" height="500" fill="black" stroke="white" stroke-width="10">
+        </rect>
+
+        <rect x="1100" y="10" width="500" height="500" fill="black" stroke="white" stroke-width="10">
+        </rect>
+
+        <text x="100" y="415" font-family="courier" font-size="500" fill="white" id="slot1">
+          -
+        </text>
+
+        <text x="650" y="415" font-family="courier" font-size="500" fill="white" id="slot2">
+          -
+        </text>
+
+        <text x="1200" y="415" font-family="courier" font-size="500" fill="white" id="slot3">
+          -
+        </text>
+      </svg>
+
+    </section>
+    <section class="center lever">
+
+      <div id="tokens">
+        <div>WANNA BET TO LOSE MONEY!!!</div>
+        <button id="safeBet"> PLAY SAFE?</button>
+        <button id="riskyBet"> RISK IT ALL ??
+        </button>
+      </div>
+      <button id="spins">TAKE A SPIN!</button>
+    </section>
+
+    <div id="message" class="center message">
+    </div>
+
+    </section>
+
+  </main>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</hmtl>
