@@ -46,18 +46,44 @@ h1 img{
 }
 
 .menu-container{
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
-  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3em;
+  max-width: 80%;
+  padding: 50px;
+  margin: 0 auto;
+  text-align: center;
   border: solid #FFCB05 3px;
   background: #3D7DCA;
-  border-radius: 5%;
+  
 }
 .menu-container img{
   max-width: 200px;
 }
-
+.menu-container input{
+  width:100px;
+  border: solid #FFCB05 3px;
+  border-radius: 10%;
+  text-align: center;
+}
+.menu-container #coinAmount{
+  background: white;
+  padding: 0 20px;
+  border: solid #FFCB05 3px;
+  border-radius: 10%;
+  text-align: center;
+}
+img#playButton{
+  opacity:0.7;
+}
+img#playButton:hover{
+  opacity:1;
+  cursor: pointer;
+}
+img#playButton:active{
+  transform:scale(1.1);
+}
 html{
   background:linear-gradient(#CC0000, #3B4CCA);
   height: 100vh;
