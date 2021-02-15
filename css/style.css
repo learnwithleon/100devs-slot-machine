@@ -17,6 +17,14 @@ h1{
   text-align: center;
 }
 
+#slotContainer{
+  margin-top: 10rem;
+}
+
+.hidden{
+  display: none;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
