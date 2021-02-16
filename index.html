@@ -11,8 +11,11 @@
 <body>
 	<h1 class="testClass">best slot machine ever</h1>
 	<div class="container text-center mt-3">
-		<button class="btn primary">Winning Combinations</button>
-		<button class="btn primary ml-3" id="roll">Roll Machine</button>
+		<form action="rules.html">
+			<button type="submit" class="btn primary">Rules and Combinations</button>
+		</form>
+		<button type="button" class="btn primary ml-3 mt-3 roll" id="rollMin">Roll Machine (Min Bet)</button>
+		<button type="button" class="btn primary ml-3 mt-3 roll" id="rollMax">Roll Machine (Max Bet)</button>
 	</div>
 	<div class="container" id="slotContainer">
 		<div class="row">
@@ -21,7 +24,8 @@
 			<div class="col-md-4"><img src="img/seven.svg" alt="" class="h-50 w-100 reel3"></div>
 		</div>
 	</div>
-	<h1 class="testClass">Total Winnings: 0</h1>
+	<h1 class="testClass">Total Coins Left: <span id="coinsLeft">1000</span></h1>
+	<h1 class="testClass">Total Winnings: <span id="winnings">0</span></h1>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

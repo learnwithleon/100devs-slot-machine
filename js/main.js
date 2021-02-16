@@ -7,17 +7,74 @@ const reel3 = document.querySelector('.reel3');
 const reelArr=[reel1,reel2,reel3];
 const total=0;
 const winningCombs=[[3,2,3],[2,0,2],[4,2,0],[1,4,1],[0,0,1],[3,3,2]];
+const coins=500;
+const coinsLeft = document.querySelector('#coinsLeft');
+const winnings = document.querySelector('#winnings');
 
-document.querySelector('#roll').addEventListener('click', runGame);
+document.querySelector('#rollMin').addEventListener('click', function(){
+    runGame("min");
+});
+document.querySelector('#rollMax').addEventListener('click', function(){
+    runGame("max");
+});
 
-function runGame(){
+function runGame(bet){
+    if(bet=='min'&&coinsLeft.innerText<10){
+        alert("You can't play anymore. There's not enough coins. Maybe refresh?");
+        return;
+    }
+    else if(bet=='max'&&coinsLeft.innerText<500){
+        alert("You can't bet max. There's not enough coins. Maybe try betting min now, ya goof.");
+        return;
+    }
+    console.log(bet);
     let roll=[];
     for(let i=0;i<3;i++){
         roll.push(getItem());
     }
     console.log(roll);
     displayRoll(roll);
-    checkComb(roll);
+    let winOrNot;
+    setTimeout(function(){
+        console.log("Hello");
+        winOrNot=checkComb(roll);
+        console.log(winOrNot);
+        if(!winOrNot){
+            alert("You didn't win anything");
+        }
+        else if(winOrNot===1){
+            alert("JACKPOT! YOU WIN 50K CONGRATS YAY");
+        }
+        else{
+            alert("YOU WIN WITH ONE OF THE WINNING COMBINATIONS!");
+        }
+        updateStuff(bet, winOrNot);
+    },3500);
+}
+
+function updateStuff(bet, winOrNot){
+    if(bet=='min'){
+        coinsLeft.innerText=(Number(coinsLeft.innerText)-10).toString();
+    }
+    else{
+        coinsLeft.innerText=(Number(coinsLeft.innerText)-500).toString();
+    }
+    if(winOrNot==1){
+        console.log('Winnings: '+Number(winnings.innerText));
+        winnings.innerText=(Number(winnings.innerText)+50000).toString();
+        coinsLeft.innerText=(Number(coinsLeft.innerText)+50000).toString();
+    }
+    else if(winOrNot==2){
+        if(bet=='min'){
+            winnings.innerText=(Number(winnings.innerText)+200).toString();
+            coinsLeft.innerText=(Number(coinsLeft.innerText)+200).toString();
+        }
+        else{
+            winnings.innerText=(Number(winnings.innerText)+2000).toString();
+            coinsLeft.innerText=(Number(coinsLeft.innerText)+2000).toString();
+        }
+    }
+
 }
 
 function displayRoll(roll){
@@ -45,19 +102,18 @@ function displayRoll(roll){
 }
 
 function checkComb(roll){
-    setTimeout(function(){
     console.log(roll);
+    console.log(winningCombs.map(el=>el.join("")).includes(roll.join("")));
     if(roll.filter(el=>el===roll[0]).length==3){
-        alert("JACKPOT!");
+        console.log("WIN");
+        return 1;
     }
-    else if(winningCombs.includes(roll)){
-        alert("YOU WIN X AMOUNT");
+    else if(winningCombs.map(el=>el.join("")).includes(roll.join(""))){
+        return 2;
     }
     else{
-        alert("YOU DIDNT WIN ANYTHING")
+        return null;
     }
-
-    },3500)
 }
 
 function getItem(){
