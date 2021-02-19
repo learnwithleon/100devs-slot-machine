@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: "Lobster", cursive;
+  margin: 0;
+  text-align: center;
+  background-color: #4cc3c7;
+  background-image: url("https://www.transparenttextures.com/patterns/silver-scales.png");
+  background-color: #4cc3c7;
+  background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
+}
+h1 {
+  font-size: clamp(1.8rem, 1.3333rem + 2.0741vw, 3.2rem);
+  width: 100%;
+  color: rgb(243, 223, 108);
+  text-shadow: 1px 2px 2px rgb(190, 53, 73);
+}
+
+.reelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1586794793342-cae7afff0309?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8b2NlYW4lMjBmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  background-position: center bottom;
+  border: 2px solid gold;
+}
+
+.reel {
+  width: 20vw;
+  background-color: rgba(194, 212, 250, 0.646);
+  height: 18vw;
+  border: 4px solid rgb(121, 198, 243);
+  font-size: clamp(2.5rem, 1.3333rem + 7.4074vw, 8rem);
+  margin: 2rem 1rem;
+  padding: clamp(0.5rem, -0.1667rem + 2.963vw, 2.5rem);
+  /* padding: 2.5rem 1.5rem; */
+  border-radius: 50%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 2px 3px 4px rgba(0, 0, 0, 0.541);
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spin {
+  display: block;
+  width: 100%;
+  margin: 0.5em;
+}
+
+.bet {
+  margin: 0.5em 1.3em;
+  padding: 0.5em 0.9em;
+  font-size: 1.2em;
+}
+
+button {
+  background-color: rgb(245, 227, 129);
+  color: rgb(214, 141, 152);
+  text-shadow: 1px 1px 2px rgb(138, 63, 74), 2px 2px 2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(72, 162, 165);
+  border-radius: 25px;
+  font-family: "Sriracha", cursive;
+  box-shadow: 2px 2px 3px teal, 2px 2px 5px rgb(1, 75, 75);
+}
+
+.spinBtn {
+  padding: 0.7em 1.1em;
+  font-size: 2em;
+  border-radius: 50%;
+}
+
+/* .startBet,
+.maxBet {
+  font-size: 1.5rem;
+  width: 12vw;
+} */
+
+.fas {
+  margin: 0 0.5em;
+  color: rgb(201, 138, 147);
+  text-shadow: 2px 2px 3px teal, 2px 2px 5px rgb(1, 75, 75);
+}
+
+.currentEarnings,
+.totalBet {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 3px teal, 2px 2px 5px rgb(1, 75, 75);
+}
+
+.payoutMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-size: clamp(0.9rem, 0.6rem + 1.3333vw, 1.8rem);
+  color: rgb(201, 96, 111);
+  text-shadow: 1px 1px 2px teal, 2px 2px 3px rgb(1, 75, 75);
+  background-color: rgba(245, 227, 129, 0.7);
+  overflow: hidden;
+}
+
+.payoutMessage span {
+  /* scrolling text effects update with each spin */
+  animation: marquee 7s linear infinite;
+  padding-left: 40%;
+  display: inline-block;
+  font-family: "Sriracha", cursive;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(50%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

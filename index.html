@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>
+      <i class="fas fa-fish"></i> Welcome to the Sand Dollar Casino's Mermaid
+      Slots
+      <i class="fas fa-disease"></i>
+    </h1>
+
+    <div class="reelContainer">
+      <div class="reel" id="reel1"></div>
+      <div class="reel" id="reel2"></div>
+      <div class="reel" id="reel3"></div>
+    </div>
+    <div class="payoutMessage">
+      <span>Catch all 3 mermaids for a special bonus!</span>
+    </div>
+    <div class="currentEarnings">Starting Credit: $1000</div>
+    <div class="totalBet">Current Bet: $0</div>
+    <div class="btnWrapper">
+      <button class="betUp bet">+10</button>
+      <button class="bet startBet">Bet 100</button>
+      <button class="betDown bet">-10</button>
+      <button class="maxBet bet">YOLO</button>
+    </div>
+    <div class="spin">
+      <button class="spinBtn">SPIN</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
