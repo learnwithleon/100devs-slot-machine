@@ -1,0 +1,132 @@
+/* Box Model Hack */
+* {
+   box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.displayCards{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Box Model Hack */
+* {
+   box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+margin: 0;
+background: #222;
+background-image: url(../css/img/backgroundpokies.jpg);
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 800px;
+    height: 50vh;
+    margin: 1rem;
+ 
+    
+} 
+
+.resultCard {
+     background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 400px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonCount {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+button { 
+  border-radius: 50%; 
+  /*width: 200px;
+  height: 200px;*/
+  border: none;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  background: red;
+  text-shadow: 0 3px 1px rgba(122,17,8,.8);
+  box-shadow: 0 8px 0 rgb(183,9,0), 
+    0 15px 20px rgba(0,0,0,.35);
+  text-transform: uppercase;
+  transition: .4s all ease-in;
+  outline: none; 
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+button span { position: relative; }
+/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
+
+
+
+
+
