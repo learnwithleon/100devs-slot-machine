@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto" rel="stylesheet">
+
+
+    <title>Slot Machine</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+      <div class="container">
+  <h1 class="title"> Smiley Sl😱ts </h1>
+  <div class="money-container">
+    <div id="money">100</div>
+    <div class="changes"> </div>
+  </div>
+
+  <div class="play-area">
+    <div class="reel-container"></div>
+    <div class="reel-container"></div>
+    <div class="reel-container"></div>
+  </div>
+
+  <div class="info">
+    <div class="instructions">
+      Press anywhere to spin the reels.<br/> 
+    
+      Enter amount to bet. <br/>
+      <input type="number" name="betAmount" id="betAmount" style="text-align: center;"> <br/>
+      <button id="btnBetMin">Bet Minimum</button>
+      <button id="btnBetAmount">Bet Custom Amount</button>
+      <button id="btnBetMax">Bet Maximum</button> <br/>
+      <button id="btnSpin" onclick="startSpin()">Spin!!!</button> <br/>
+      
+      Each spin costs <span id="spanBetAmount">1</span> 💰<br/> Match at least two on the middle row to win!<br/> See prizes below.</div>
+
+    <div class="prize-table">
+      <div class="doubles">
+      </div>
+      <div class="triples">
+
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
