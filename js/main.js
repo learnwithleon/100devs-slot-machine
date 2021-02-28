@@ -2,9 +2,9 @@ let slot1 = document.getElementById('slot1')
 let slot2 = document.getElementById('slot2')
 let slot3 = document.getElementById('slot3')
 let slotArray = [slot1, slot2, slot3]
-let belle = '../slot-machine/img/belle.png'
-let bonnie = '../slot-machine/img/bonnie.png'
-let dusty = '../slot-machine/img/dusty.png'
+let belle = 'img/belle.png'
+let bonnie = 'img/bonnie.png'
+let dusty = 'img/dusty.png'
 
 let money = {
   balance: 100,
