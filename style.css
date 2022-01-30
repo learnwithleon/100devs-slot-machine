@@ -1,0 +1,17 @@
+/* .slotsContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+} */
+#col0, #col1, #col2{
+    float: left;
+}
+
+div{
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+section > div> img {
+    width: 48px;
+}
